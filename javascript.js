@@ -16,14 +16,27 @@
  */
 
  const gameChoices = [
-    "Rock",
-    "Paper",
-    "Scissors"
+    "rock",
+    "paper",
+    "scissors"
  ];
 
  function getComputerChoice() {
- let choice = gameChoices[Math.floor(Math.random() * gameChoices.length)];
- return choice;
+    let choice = gameChoices[Math.floor(Math.random() * gameChoices.length)];
+    return choice;
  }
- 
+
 getComputerChoice();
+
+function playRound(playerSelection, computerSelection) {
+    if (playerSelection > computerSelection) {
+        return "You win!";
+    } else if (computerSelection > playerSelection) {
+        return "You lose!";
+    } else {
+        return "Tie";
+    }   
+}
+
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
