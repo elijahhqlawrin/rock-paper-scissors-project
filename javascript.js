@@ -14,3 +14,16 @@
         Announce winner/loser after final round.
  Nest round funciton inside another function called game().
  */
+
+ const gameChoices = [
+    "Rock",
+    "Paper",
+    "Scissors"
+ ];
+
+ function getComputerChoice() {
+ let choice = gameChoices[Math.floor(Math.random() * gameChoices.length)];
+ return choice;
+ }
+ 
+getComputerChoice();
